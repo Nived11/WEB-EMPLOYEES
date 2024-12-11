@@ -14,7 +14,6 @@
                 <a href="../index.html"><button class="regbutton">Home</button></a>
             </div>
         </div>
-
         <div class="container">
             <div class="login">
                
@@ -23,7 +22,8 @@
                 </div>
                 
                 <div class="right-div">
-                    
+                    <form action="/submit" method="post" id="form">
+
                     <div class="heading-div">
                         <h3>REGISTRATION FORM</h3>
                     </div>
@@ -31,8 +31,8 @@
                         <div class="name-div">
                             <h3 >Name</h3>
                         </div>
-                        <div class="input-div"><input  type="text" >
-                            <span>*invalid name</span>
+                        <div class="input-div"><input  type="text" name="name" id="name">
+                            <span></span>
                         </div>
                         
                     </div>
@@ -41,14 +41,14 @@
                         <div class="name-div">
                             <h3>Date-of-Birth</h3>
                         </div>
-                        <div class="input-div"><input  type="text" ><span>*invalid dob</span></div>
+                        <div class="input-div"><input  type="text" name="dob" id="dob"><span></span></div>
                     </div>
 
                     <div class="det-divs">
                         <div class="name-div">
                             <h3>Address</h3>
                         </div>
-                        <div class="input-div"><input  type="text" ><span>*invalid address</span></div>
+                        <div class="input-div"><input  type="text" name="address" id="address"><span></span></div>
                     </div>
 
                     <div class="det-divs">
@@ -56,9 +56,9 @@
                             <h3>Gender</h3>
                         </div>
                         <div class="input-div-gender">
-                            <input class="gender" type="radio" value="gender" name="gender"><p class="gender-name">Male</p>
-                            <input class="gender" type="radio" value="gender" name="gender"><p class="gender-name">Female</p>
-                            <input class="gender" type="radio" value="gender" name="gender"><p class="gender-name">Others</p>
+                            <input class="gender" type="radio" value="Male" name="gender" id="gender"><p class="gender-name">Male</p>
+                            <input class="gender" type="radio" value="Female" name="gender" id="gender"><p class="gender-name">Female</p>
+                            <input class="gender" type="radio" value="others" name="gender" id="gender"><p class="gender-name">Others</p>
                             
                         </div>
                     </div>
@@ -67,14 +67,14 @@
                         <div class="name-div">
                             <h3>E-mail</h3>
                         </div>
-                        <div class="input-div"><input  type="text" ><span>*invalid email</span></div>
+                        <div class="input-div"><input  type="text" name="email" id="email"><span></span></div>
                     </div>
 
                     <div class="det-divs">
                         <div class="name-div">
                             <h3>Phone</h3>
                         </div>
-                        <div class="input-div"><input  type="text" ><span>*invalid phone</span></div>
+                        <div class="input-div"><input  type="text" name="phone" id="phone"><span></span></div>
                     </div>
                     <div class="det-divs">
                         <div class="name-div">
@@ -86,10 +86,11 @@
                     <div class="submit-divs">
                         <button>submit</button>
                     </div>
-                
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../JS/reg.js"></script>
 </body>
 </html>

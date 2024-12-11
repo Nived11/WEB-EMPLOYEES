@@ -58,6 +58,27 @@ else if(pathname=="/JS/edit.js"){
     res.end(fs.readFileSync("../Front-end/JS/edit.js"))
 }
 
+if(pathname=="/submit"&&req.method=="POST"){
+    let body="";
+    req.on("data",(chunks)=>{
+        body+=chunks.toString();
+        console.log(body);
+        
+    })
+    req.on("end",async()=>{
+        const formData=queryString.parse(body);
+        console.log(formData);
+        collection.insertOne(formData).then(()=>{
+            console.log("successfully inserted..");
+            
+        }).catch((error)=>{
+            console.log(error);
+        })
+        
+    })
+    res.writeHead(200,{"Content-Type":"text/html"});
+    res.end(fs.readFileSync("../Front-end/index.html"))
+}
 
 })
 
